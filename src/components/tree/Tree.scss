@@ -1,0 +1,93 @@
+.main-tree {
+    background: #eee;
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    .tree-data {
+        padding: .7em;
+        padding-top: 5em;
+        padding-left: 2em;
+        max-height: 100vh;
+        overflow-y: auto;
+
+        ul {
+            list-style: none;
+            line-height: 2em;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        details summary::marker {
+            display: none;
+            content: "";
+        }
+
+        ul li {
+            position: relative;
+        }
+
+        .detail-list li{
+            font-size: small;
+        }
+
+        ul li::before {
+            position: absolute;
+            left: -10px;
+            top: 0px;
+            border-left: 2px solid gray;
+            border-bottom: 2px solid gray;
+            content: "";
+            width: 8px;
+            height: 1em;
+        }
+
+        ul li::after {
+            position: absolute;
+            left: -10px;
+            bottom: 0px;
+            border-left: 2px solid gray;
+            content: "";
+            width: 8px;
+            height: 100%;
+        }
+
+        ul li:last-child::after {
+            display: none;
+        }
+
+        ul.tree>li::after,
+        ul.tree>li::before {
+            display: none;
+        }
+
+        ul summary::before {
+            position: absolute;
+            left: -1.25em;
+            top: .4em;
+            content: url(../../assets/closed-folder.png);
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50em;
+            z-index: 999;
+            text-align: center;
+            line-height: .88em;
+        }
+
+        ul details[open]>summary::before {
+            content: url(../../assets/open-folder.png);
+        }
+
+        .tree-item{
+            padding: 0.5em;
+            cursor: pointer;
+            &:hover{
+                background: #cfcaca;
+                border-radius: 1em;
+            }
+        }
+    }
+}

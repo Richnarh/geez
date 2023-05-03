@@ -1,0 +1,19 @@
+.main-content{
+    padding-top: 3.6rem;
+    display: flex;
+    column-gap: .4rem;
+    position: relative;
+    width: 100%;
+    .tree{
+        width: 20%;
+        margin-right: 10px;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+    }
+    .content{
+        width: 80% auto;
+        margin-left: 18%;
+        top: 0%;
+    }
+}

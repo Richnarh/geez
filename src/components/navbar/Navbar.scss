@@ -1,0 +1,11 @@
+@import '../../styles/variable.scss';
+
+.nav-item li a{
+    border: 1px solid $defaultColor;
+    padding: 0.7em;
+    border-radius: 3px;
+
+    &:hover{
+        background: $defaultColor;
+    }
+}
